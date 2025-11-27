@@ -67,4 +67,11 @@
         android:layout_height="wrap_content"
         android:text="Iniciar sesion">
     </Button>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inicia sesión con Google"
+        android:backgroundTint="@color/black"
+        />
 </LinearLayout>
