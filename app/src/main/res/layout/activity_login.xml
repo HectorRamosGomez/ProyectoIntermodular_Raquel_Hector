@@ -21,7 +21,7 @@
 
     </TextView>
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:layout_width="370dp"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -32,7 +32,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:layout_width="370dp"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -43,7 +43,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:layout_width="370dp"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -52,19 +52,28 @@
             android:hint="Contraseña">
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
-    
+
     <Button
         android:id="@+id/boton1"
         android:backgroundTint="@color/black"
-        android:layout_width="match_parent"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:text="Continue">
     </Button>
     <Button
         android:id="@+id/boton2"
         android:backgroundTint="@color/black"
-        android:layout_width="match_parent"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:text="Iniciar sesion">
     </Button>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_google"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:text="Inicia sesión con Google"
+        android:backgroundTint="@color/black"
+        app:icon="@drawable/logitogugle"
+
+        />
 </LinearLayout>
