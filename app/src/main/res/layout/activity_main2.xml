@@ -14,7 +14,7 @@
             android:id="@+id/titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            text
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
