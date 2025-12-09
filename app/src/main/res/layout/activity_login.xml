@@ -23,9 +23,10 @@
     </TextView>
 
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="-200dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="-350dp"
+        android:layout_marginEnd="-200dp"
         android:src="@drawable/ESTE_SIIIIIIIIIIII">
     </ImageView>
 
@@ -76,6 +77,10 @@
         android:layout_height="wrap_content"
         android:text="Registrarse">
     </Button>
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="">
     <TextView
         android:id="@+id/SiYatienecuenta"
         android:layout_width="wrap_content"
@@ -92,13 +97,5 @@
         android:layout_height="wrap_content"
         android:text="Iniciar sesion">
     </Button>
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/login_google"
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:text="Inicia sesión con Google"
-        android:backgroundTint="@color/black"
-        app:icon="@drawable/logitogugle"
-        />
-
+</GridLayout>
 </LinearLayout>

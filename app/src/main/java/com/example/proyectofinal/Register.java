@@ -46,7 +46,7 @@ public class Register extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext().Login.class);
+                Intent intent=new Intent(getApplicationContext(),Login.class);
                 progressBar.setVisibility(View.VISIBLE);
                 String NomyApe,correoelectronico,contrasena;
                 NomyApe=String.valueOf((editTextNameandSurname.getText()));
@@ -65,7 +65,7 @@ public class Register extends AppCompatActivity {
                     Toast.makeText(Register.this, "enter password", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                mAuth.createUserWithEmailAndPassword(correoelectronico, contrasena)                        .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
+                mAuth.createUserWithEmailAndPassword(correoelectronico, contrasena).addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
@@ -79,8 +79,6 @@ public class Register extends AppCompatActivity {
                                 }
                             }
                         });
-                    }
-                }
             }
         });
     }
