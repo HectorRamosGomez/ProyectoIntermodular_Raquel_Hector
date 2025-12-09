@@ -46,7 +46,7 @@
         android:layout_width="370dp"
         android:layout_marginTop="75dp"
         android:layout_height="wrap_content"
-        android:text="Comenzar"
+        android:text="Start"
         android:textSize="20dp"
         android:textStyle="bold">
     </Button>
@@ -54,7 +54,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Selecciona el idioma:"
+        android:text="Choose the idiom: "
         android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:textSize="25dp">
