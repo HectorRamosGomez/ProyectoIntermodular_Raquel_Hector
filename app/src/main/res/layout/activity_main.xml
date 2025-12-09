@@ -1,70 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     android:background="@color/white"
-    tools:context=".MainActivity">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white">
+    tools:context=".Login">
 
-        <TextView
-            android:id="@+id/text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome to"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:layout_marginTop="126dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="300dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="OnlySave"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:textColor="@color/black">
+    </TextView>
 
-        <TextView
-            android:id="@+id/text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="OnlySave"
-            android:textColor="@color/black"
-            android:textSize="56sp"
-            android:fontFamily=""
-            android:layout_marginTop="18dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text1" />
-        <androidx.cardview.widget.CardView
-            android:id="@+id/boton"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_marginBottom="140dp"
-            android:elevation="4dp"
-            android:translationZ="8dp"
-            android:backgroundTint="@color/black"
-            app:cardCornerRadius="32dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent">
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black">
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/nsqs"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:backgroundTint="@color/black"
-                    app:strokeWidth="8dp"
-                    app:cardCornerRadius="32dp"
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="-300dp"
+        android:src="@drawable/ESTE_SIIIIIIIIIIII">
+    </ImageView>
 
-                    >
-                </com.google.android.material.card.MaterialCardView>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ProgressBar
+        android:id="@+id/progresBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ProgressBar>
+
+    <Button
+        android:id="@+id/boton1"
+        android:backgroundTint="@color/black"
+        android:layout_width="370dp"
+        android:layout_marginTop="75dp"
+        android:layout_height="wrap_content"
+        android:text="Comenzar"
+        android:textSize="20dp"
+        android:textStyle="bold">
+    </Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona el idioma:"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp">
+    </TextView>
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="1"
+        android:columnCount="2">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ukflag"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp">
+        </ImageButton>
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bandera_españa"
+            android:layout_marginTop="40dp">
+        </ImageButton>
+    </GridLayout>
+
+
+</LinearLayout>
