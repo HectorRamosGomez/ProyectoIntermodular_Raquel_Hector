@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,6 +11,7 @@
     android:background="@color/white"
     tools:context=".Login">
     <TextView
+        android:id="@+id/login"
         android:text="OnlySave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,8 +20,15 @@
         android:layout_marginBottom="200dp"
         android:textSize="50dp"
         android:fontFamily="sans-serif-medium">
-
     </TextView>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="-200dp"
+        android:src="@drawable/ESTE_SIIIIIIIIIIII">
+    </ImageView>
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="370dp"
         android:layout_height="wrap_content">
@@ -52,14 +61,30 @@
             android:hint="Contraseña">
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
+    <ProgressBar
+        android:id="@+id/progresBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ProgressBar>
 
     <Button
         android:id="@+id/boton1"
         android:backgroundTint="@color/black"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:text="Continue">
+        android:text="Registrarse">
     </Button>
+    <TextView
+        android:id="@+id/SiYatienecuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:text="¿Ya tienes cuenta?"
+        android:fontFamily="sans-serif-medium">
+
+    </TextView>
     <Button
         android:id="@+id/boton2"
         android:backgroundTint="@color/black"
@@ -74,6 +99,6 @@
         android:text="Inicia sesión con Google"
         android:backgroundTint="@color/black"
         app:icon="@drawable/logitogugle"
-
         />
+
 </LinearLayout>
