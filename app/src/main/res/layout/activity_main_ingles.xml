@@ -25,12 +25,6 @@
         android:textColor="@color/black">
     </TextView>
 
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="-300dp"
-        android:src="@drawable/ESTE_SIIIIIIIIIIII">
-    </ImageView>
 
     <ProgressBar
         android:id="@+id/progresBar"
@@ -77,7 +71,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/bandera_españa"
+
             android:layout_marginTop="40dp">
         </ImageButton>
     </GridLayout>
