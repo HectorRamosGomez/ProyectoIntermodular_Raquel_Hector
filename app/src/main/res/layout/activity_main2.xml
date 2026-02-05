@@ -1,28 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:rowCount="1"
-    android:columnCount="2"
-    android:alignmentMode="alignBounds">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".Login">
 
-    <ImageButton
-        android:id="@+id/btnUk"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ukflag"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="16dp" />
 
-    <ImageButton
-        android:id="@+id/btnSpain"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:contentDescription="TODO"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bandera_espain"
-        android:layout_marginTop="40dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seleccione_el_idioma"
+        android:textSize="40sp"/>
 
-</GridLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alignmentMode="alignBounds"
+        android:columnCount="2"
+        android:rowCount="1">
+
+        <ImageButton
+            android:id="@+id/btnUk"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ukflag" />
+
+        <ImageButton
+            android:id="@+id/btnSpain"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="TODO"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bandera_espain" />
+
+    </GridLayout>
+
+</LinearLayout>
+
+
