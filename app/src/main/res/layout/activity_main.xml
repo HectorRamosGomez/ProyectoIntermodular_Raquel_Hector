@@ -19,68 +19,29 @@
         android:layout_marginTop="60dp"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
-        android:text="OnlySave"
-        android:textSize="50dp"
+        android:text="@string/onlysave"
+        android:textSize="50sp"
         android:textStyle="bold"
         android:textColor="@color/black">
     </TextView>
 
     <ImageView
+        android:id="@+id/logo"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginTop="-300dp"
-        android:src="@drawable/ESTE_SIIIIIIIIIIII">
+        android:src="@drawable/logo_bueno">
     </ImageView>
 
-    <ProgressBar
-        android:id="@+id/progresBar"
-        android:visibility="gone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </ProgressBar>
-
     <Button
-        android:id="@+id/boton1"
+        android:id="@+id/botonComenzar"
         android:backgroundTint="@color/black"
         android:layout_width="370dp"
         android:layout_marginTop="75dp"
         android:layout_height="wrap_content"
-        android:text="Comenzar"
-        android:textSize="20dp"
+        android:text="@string/comenzar"
+        android:textSize="20sp"
         android:textStyle="bold">
     </Button>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Selecciona el idioma:"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:textSize="25dp">
-    </TextView>
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:rowCount="1"
-        android:columnCount="2">
-
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ukflag"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="16dp">
-        </ImageButton>
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/bandera_españa"
-            android:layout_marginTop="40dp">
-        </ImageButton>
-    </GridLayout>
-
 
 </LinearLayout>

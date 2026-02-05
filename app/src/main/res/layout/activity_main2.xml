@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<GridLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white">
-        <TextView
-            android:id="@+id/titulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+    android:rowCount="1"
+    android:columnCount="2"
+    android:alignmentMode="alignBounds">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageButton
+        android:id="@+id/btnUk"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ukflag"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp" />
 
+    <ImageButton
+        android:id="@+id/btnSpain"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="TODO"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bandera_espain"
+        android:layout_marginTop="40dp" />
 
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</GridLayout>

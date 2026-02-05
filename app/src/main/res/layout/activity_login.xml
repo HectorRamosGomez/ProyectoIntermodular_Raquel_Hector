@@ -90,7 +90,7 @@
         android:backgroundTint="@color/black"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:text="Iniciar sesion">
+        android:text="Ya tengo una cuenta">
     </Button>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/login_google"

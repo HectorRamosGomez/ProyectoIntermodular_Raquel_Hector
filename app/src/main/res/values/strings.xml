@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ProyectoFinal</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="onlysave">OnlySave</string>
 </resources>
