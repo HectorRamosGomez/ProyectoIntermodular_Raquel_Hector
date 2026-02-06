@@ -24,6 +24,13 @@
             android:name=".MainActivity2"
             android:exported="false" />
 
+        <activity
+            android:name=".Registrarse_credenciales"
+            android:exported="true">
+
+        </activity>
+
+
     </application>
 
 </manifest>
