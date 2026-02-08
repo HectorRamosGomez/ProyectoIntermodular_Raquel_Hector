@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ProyectoFinal</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="onlysave">OnlySave</string>
+    <string name="seleccione_el_idioma">Seleccione el idioma</string>
+    <string name="elijaidioma">Seleccione el idioma</string>
 </resources>
