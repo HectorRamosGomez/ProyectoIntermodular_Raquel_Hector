@@ -23,7 +23,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
 
@@ -31,51 +31,61 @@
                     android:id="@+id/tituloLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="OnlySave"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/fuentegod"
+                    android:layout_gravity="center"
                     android:layout_marginTop="100dp"
+                    android:fontFamily="@font/fuentegod"
+                    android:text="OnlySave"
                     android:textSize="60dp"
-                    android:layout_gravity="center">
+                    android:textStyle="bold">
 
 
                 </TextView>
+
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutNombreCompleto"
                     android:layout_width="370dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
                     android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp">
+
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/nombre"
+                        android:id="@+id/nombreCompleto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Nombre Completo">
-                    </com.google.android.material.textfield.TextInputEditText>
+                        android:hint="Nombre Completo"></com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="370dp"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/mail"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Correo electronico"
-                        android:inputType="textEmailAddress">
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
-                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutCorreo"
                     android:layout_width="370dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
-                    app:passwordToggleEnabled="true"
+                    android:paddingBottom="20dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Correo electronico"
+                        android:inputType="textEmailAddress"></com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutPassword"
+                    android:layout_width="370dp"
+                    android:paddingBottom="20dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
                     app:counterEnabled="true"
-                    app:counterMaxLength="15">
+                    app:counterMaxLength="15"
+                    app:passwordToggleEnabled="true">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/password1"
                         android:layout_width="match_parent"
@@ -85,33 +95,39 @@
 
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutPasswordConfirmacion"
+                    android:paddingBottom="20dp"
                     android:layout_width="370dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
-                    app:passwordToggleEnabled="true"
                     app:counterEnabled="true"
-                    app:counterMaxLength="15">
+                    app:counterMaxLength="15"
+                    app:passwordToggleEnabled="true">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/password2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Confirmación contraseña">
+
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
-                <com.google.android.material.button.MaterialButton
 
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/BotonConfirmarCrearCuenta"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_gravity="center"
-                    android:text="Registrarse"
-                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
                     android:backgroundTint="@color/black"
                     android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
+                    android:paddingRight="10dp"
+                    android:text="Registrarse"
+                    android:textStyle="bold">
 
                 </com.google.android.material.button.MaterialButton>
 
