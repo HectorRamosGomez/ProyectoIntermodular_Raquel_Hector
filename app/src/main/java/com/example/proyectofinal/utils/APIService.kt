@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit
 
 object APIService {
 
-    private const val BASE_URL = "https://proyectointermodular-raquel-hector.onrender.com"
+    private const val BASE_URL = "https://servidor-de-render.onrender.com/"
 
     fun getService(): APIConsumer {
 
