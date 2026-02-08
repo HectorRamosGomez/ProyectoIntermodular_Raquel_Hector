@@ -1,21 +1,22 @@
-package com.example.proyectofinal
+package com.example.proyectofinal.login
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import com.example.proyectofinal.R
 import com.example.proyectofinal.databinding.ActivityRegistroCredencialesBinding
 
 class Registrarse_credenciales: AppCompatActivity(), View.OnClickListener, View.OnFocusChangeListener, View.OnKeyListener{
 
     private lateinit var mBinding: ActivityRegistroCredencialesBinding
 
-    override fun onCreate(savedInstanceState:Bundle?){
+    override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         mBinding = ActivityRegistroCredencialesBinding.inflate(LayoutInflater.from(this))
-        setContentView(R.layout.activity_registro_credenciales)
+        setContentView(mBinding.root)
         mBinding.nombreCompleto.onFocusChangeListener = this
         mBinding.mail.onFocusChangeListener = this
         mBinding.password1.onFocusChangeListener = this
@@ -141,7 +142,9 @@ class Registrarse_credenciales: AppCompatActivity(), View.OnClickListener, View.
                             mBinding.layoutCorreo.isErrorEnabled = false
                         }
                     }else {
-                        validarEmail()
+                        if(validarEmail()){
+                            //AYUDA
+                        }
                     }
                 }
                 R.id.password1 -> {

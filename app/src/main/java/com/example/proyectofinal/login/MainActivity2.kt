@@ -1,14 +1,15 @@
-package com.example.proyectofinal
+package com.example.proyectofinal.login
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import androidx.appcompat.app.AppCompatActivity
+import com.example.proyectofinal.R
 
 class MainActivity2: AppCompatActivity(){
 
 
-    override fun onCreate(savedInstanceState:Bundle?){
+    override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 

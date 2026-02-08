@@ -1,7 +1,8 @@
-package com.example.proyectofinal
+package com.example.proyectofinal.pagina_principal
+
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-
+import com.example.proyectofinal.R
 
 class Suscripciones : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

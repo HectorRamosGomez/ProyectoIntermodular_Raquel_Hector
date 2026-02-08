@@ -9,10 +9,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.ProyectoFinal">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".login.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,11 +22,11 @@
         </activity>
 
         <activity
-            android:name=".MainActivity2"
+            android:name=".login.MainActivity2"
             android:exported="false" />
 
         <activity
-            android:name=".Registrarse_credenciales"
+            android:name=".login.Registrarse_credenciales"
             android:exported="true">
 
         </activity>
