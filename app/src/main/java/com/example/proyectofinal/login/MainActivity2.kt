@@ -19,7 +19,7 @@ class MainActivity2: AppCompatActivity(){
 
         buttonImagen.setOnClickListener {
 
-            val intent = Intent(this, Gastos::class.java)
+            val intent = Intent(this, MainLoginPorFavor::class.java)
             startActivity(intent)
         }
 

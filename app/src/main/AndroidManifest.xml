@@ -28,6 +28,8 @@
         <activity android:name=".login.MainLoginPorFavor" android:exported="true"/>
         <activity android:name=".login.CuentaCreada" android:exported="true"/>
         <activity android:name=".pagina_principal.Gastos" android:exported="true"/>
+        <activity android:name=".pagina_principal.MainAplicacion" android:exported="true"/>
+
 
 
 

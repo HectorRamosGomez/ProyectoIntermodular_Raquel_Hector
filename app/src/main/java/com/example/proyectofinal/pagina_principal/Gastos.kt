@@ -12,7 +12,7 @@ class Gastos : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.pagprincipal)
+        setContentView(R.layout.activity_gastos)
 
 
     }

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.proyectofinal.login.MainActivity2
 import com.example.proyectofinal.R
 import com.example.proyectofinal.pagina_principal.Gastos
+import com.example.proyectofinal.pagina_principal.MainAplicacion
 
 class MainLoginPorFavor: AppCompatActivity(){
 
@@ -20,7 +21,7 @@ class MainLoginPorFavor: AppCompatActivity(){
 
         button.setOnClickListener {
 
-            val intent = Intent(this, Gastos::class.java)
+            val intent = Intent(this, MainAplicacion::class.java)
             startActivity(intent)
 
         }
