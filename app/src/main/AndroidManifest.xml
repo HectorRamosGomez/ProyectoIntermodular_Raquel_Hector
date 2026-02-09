@@ -23,13 +23,13 @@
 
         <activity
             android:name=".login.MainActivity2"
-            android:exported="false" />
+            android:exported="true" />
 
-        <activity
-            android:name=".login.Registrarse_credenciales"
-            android:exported="true">
+        <activity android:name=".login.MainLoginPorFavor" android:exported="true"/>
+        <activity android:name=".login.CuentaCreada" android:exported="true"/>
+        <activity android:name=".pagina_principal.Gastos" android:exported="true"/>
 
-        </activity>
+
 
 
     </application>

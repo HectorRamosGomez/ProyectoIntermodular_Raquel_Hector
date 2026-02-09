@@ -12,25 +12,8 @@ class Gastos : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.pagprincipal) // tu layout corregido
+        setContentView(R.layout.pagprincipal)
 
-        // --- Botón atrás ---
-        val btnBack = findViewById<ImageButton>(R.id.btnBack)
-        btnBack.setOnClickListener {
-            finish() // cierra esta actividad y vuelve a la anterior
-        }
 
-        // --- EditText para euros ---
-        val editEuro = findViewById<EditText>(R.id.editEuro)
-        editEuro.hint = "0.00"
-        editEuro.inputType = android.text.InputType.TYPE_CLASS_NUMBER or
-                android.text.InputType.TYPE_NUMBER_FLAG_DECIMAL
-
-        // --- Spinner para cuentas ---
-        val spinnerCuenta = findViewById<Spinner>(R.id.spinnerCuenta)
-        val cuentas = listOf("Principal", "Secundaria")
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, cuentas)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinnerCuenta.adapter = adapter
     }
 }

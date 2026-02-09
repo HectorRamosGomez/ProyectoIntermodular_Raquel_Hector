@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.proyectofinal.R
+import com.example.proyectofinal.pagina_principal.Gastos
 
 class MainActivity2: AppCompatActivity(){
 
@@ -18,7 +19,7 @@ class MainActivity2: AppCompatActivity(){
 
         buttonImagen.setOnClickListener {
 
-            val intent = Intent(this, Registrarse_credenciales::class.java)
+            val intent = Intent(this, Gastos::class.java)
             startActivity(intent)
         }
 
