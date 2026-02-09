@@ -1,30 +1,101 @@
 package com.example.proyectofinal.login
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.material3.AlertDialog
+import androidx.compose.runtime.Composable
+import androidx.core.view.isVisible
+import androidx.lifecycle.ViewModelProvider
 import com.example.proyectofinal.R
+import com.example.proyectofinal.data.ValidateEmailBody
 import com.example.proyectofinal.databinding.ActivityRegistroCredencialesBinding
+import com.example.proyectofinal.repositorio.AuthRepository
+import com.example.proyectofinal.utils.APIService
+import com.example.proyectofinal.view.RegisterActivityViewModel
+import com.example.proyectofinal.view.RegisterActivityViewModelFactory
+
+
+
 
 class Registrarse_credenciales: AppCompatActivity(), View.OnClickListener, View.OnFocusChangeListener, View.OnKeyListener{
 
     private lateinit var mBinding: ActivityRegistroCredencialesBinding
+    private lateinit var mViewModel: RegisterActivityViewModel
 
+
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         mBinding = ActivityRegistroCredencialesBinding.inflate(LayoutInflater.from(this))
         setContentView(mBinding.root)
+        setContentView(R.layout.activity_registro_credenciales)
+        val button = findViewById<Button>(R.id.BotonConfirmarCrearCuenta)
+        button.setOnClickListener {
+            val intent = Intent(this, CuentaCreada::class.java)
+            startActivity(intent)
+        }
         mBinding.nombreCompleto.onFocusChangeListener = this
         mBinding.mail.onFocusChangeListener = this
         mBinding.password1.onFocusChangeListener = this
         mBinding.password2.onFocusChangeListener = this
+        mBinding.BotonConfirmarCrearCuenta.setOnClickListener(this)
 
-
+        mViewModel = ViewModelProvider(this, RegisterActivityViewModelFactory
+            (AuthRepository(
+            APIService.getService()), application))
+            .get(RegisterActivityViewModel::class.java)
+            setupObservers()
     }
 
+    private fun setupObservers() {
+        mViewModel.getIsLoading().observe(this){
+
+        }
+
+        mViewModel.getErrorMessage().observe(this){
+            val formErrorKeys = arrayOf("nombreCompleto", "email", "password")
+            val message = StringBuilder()
+            it.map { entry ->
+                if(formErrorKeys.contains(entry.key)){
+                    when(entry.key) {
+                        "nombreCompleto" -> {
+                            mBinding.layoutNombreCompleto.apply {
+                                isErrorEnabled = true
+                                error = entry.value
+                            }
+                        }
+                        "email" -> {
+                            mBinding.layoutCorreo.apply {
+                                isErrorEnabled = true
+                                error = entry.value
+                            }
+                        }
+                        "password" -> {
+                            mBinding.layoutPassword.apply {
+                                isErrorEnabled = true
+                                error = entry.value
+                            }
+                        }
+                    }
+                }else {
+                    message.append(entry.value)
+                    message.append("\n")
+                }
+            }
+        }
+
+        mViewModel.getUser().observe(this){
+
+
+        }
+    }
 
     // Función para poder validar el nombre y que no quede incompleto
     private fun validarNombre(): Boolean {
@@ -143,7 +214,7 @@ class Registrarse_credenciales: AppCompatActivity(), View.OnClickListener, View.
                         }
                     }else {
                         if(validarEmail()){
-                            //AYUDA
+                            mViewModel.validateEmailAddress(ValidateEmailBody(mBinding.mail.text!!.toString()))
                         }
                     }
                 }
@@ -181,7 +252,15 @@ class Registrarse_credenciales: AppCompatActivity(), View.OnClickListener, View.
     }
 
     override fun onClick(view: View?) {
+        if(view != null) {
+            when (view.id) {
+                R.id.BotonConfirmarCrearCuenta -> {
+                    if (validarNombre() && validarEmail() && validarPassword() && validarConfirmacionPassword() && validarConfirmacionPasswordConPassword()) {
 
+                    }
+                }
+            }
+        }
     }
 
     override fun onKey(view: View?, event: Int, keyEvent: KeyEvent?): Boolean {
